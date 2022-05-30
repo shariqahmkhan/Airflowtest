@@ -18,12 +18,11 @@ airflow db init
 # create user https://stackoverflow.com/questions/66160780/first-time-login-to-apache-airflow-asks-for-username-and-password-what-is-the-u
 
 airflow users create \
-  --role Admin
   --username admin \
   --firstname admin \
   --lastname admin \
-  --email admin\
-  --password admin
+  --role Admin \
+  --email srkstyle29@gmail.com  
   
 airflow webserver --port 8080 &
 
