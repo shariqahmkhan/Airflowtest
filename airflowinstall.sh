@@ -12,7 +12,15 @@ pip3 install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL
 
 # The Standalone command will initialise the database, make a user,
 # and start all components for you.
-airflow standalone &
+# airflow standalone &
+airflow db init
+
+airflow users create \
+  --username admin \
+  --firstname admin \
+  --lastname admin \
+  --email admin\
+  --password admin
 
 # Visit localhost:8080 in the browser and use the admin account details
 # shown on the terminal to login.
