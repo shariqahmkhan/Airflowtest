@@ -18,6 +18,7 @@ airflow db init
 # create user https://stackoverflow.com/questions/66160780/first-time-login-to-apache-airflow-asks-for-username-and-password-what-is-the-u
 
 airflow users create \
+  --role Admin
   --username admin \
   --firstname admin \
   --lastname admin \
